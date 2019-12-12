@@ -64,15 +64,11 @@
 	function validasi(){
 		var username = document.forms["myForm"]["username"].value;
 		var password = document.forms["myForm"]["password"].value;
-		if( username == "admin" && password == "123"){
+		if( username == "a" && password == "s"){
 			return true;
 		}
-		else if(username ==""){
-			alert("Anda harus mengisi username");
-			return false;
-		}
-		else if (password ==""){
-			alert("Anda harus mengisi password");
+		else if(username =="" || password ==""){
+			alert("Masukan username dan password Anda");
 			return false;
 		}
 		else{
