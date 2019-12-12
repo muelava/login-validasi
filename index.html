@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hai</title>
+	<title>Login</title>
 	<style type="text/css">
 		body{
 			overflow-y: hidden;
@@ -53,25 +53,31 @@
 	</style>
 </head>
 <body>
-	<form action="https://muhammadelanghardifal.github.io/login-validasi/profile.html" method="get" onsubmit="validasi()">
-		<p>YUDI GUNTARA</p>
-		Username  <input type="text" name="username" placeholder="username" id="username" required>
-		Password  <input type="password" name="password" placeholder="password" id="password" required>
+	<form action="profile.html" method="get" id="myForm" onsubmit=" return validasi()">
+		<p>Muhammad Elang Hardifal</p>
+		Username  <input type="text" name="username" placeholder="username">
+		Password  <input type="password" name="password" placeholder="password">
 		<input class="login" type="submit" name="submit" value="login">
 	</form>
 </body>
 <script type="text/javascript">
 	function validasi(){
-		var username = document.getElementById("username").value;
-		var password = document.getElementById("password").value;
-		if( username == "yudi" && password == "123"){
+		var username = document.forms["myForm"]["username"].value;
+		var password = document.forms["myForm"]["password"].value;
+		if( username == "a" && password == "s"){
 			return true;
 		}
-		// else if(username =="" && password == ""){
-		// 	alert("anda harus mengisi username & password");
-		// }
+		else if(username ==""){
+			alert("Anda harus mengisi username");
+			return false;
+		}
+		else if (password ==""){
+			alert("Anda harus mengisi password");
+			return false;
+		}
 		else{
-			alert("password atau username SALAH");
+			alert("Username atau password yang Anda masukan SALAH");
+			return false;
 		}
 	}
 </script>
